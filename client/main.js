@@ -1,11 +1,9 @@
-import angular from 'angular';
-import angularMeteor from 'angular-meteor';
-import bingoChart from '../imports/components/bingo/bingo-chart';
-import '../imports/startups/accounts-config.js';
+import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { render } from 'react-dom';
  
-angular.module('bingo', [
-  angularMeteor,
-  bingoChart.name
-]);
-
-
+import Bingo from '../imports/Bingo.jsx';
+ 
+Meteor.startup(() => {
+  render(<Bingo />, document.getElementById('bingo-container'));
+});
