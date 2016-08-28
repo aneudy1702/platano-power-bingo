@@ -1,0 +1,32 @@
+<div class="main-container">
+  <div class="result">
+    <h3 ng-if="winner">BINGO</h3>
+  </div>
+
+  <div class="chart">
+
+
+    <div class="column group" ng-repeat="group in groups">
+      <div class="group-header">
+        {{group.letter}}
+      </div>
+
+      <div class="group-number" ng-repeat="number in group.numbers" ng-class="{'extra-padding':!number, 'selected': (number && number.selected)}" ng-click="selectNumber(number, $index);">
+        <span class="digit" ng-if="number.digit">
+      {{number.digit}}
+    </span>
+        <span class="circle" ng-if="!number.digit">
+          <span class="text">free</span>
+
+        </span>
+
+        <span class="circle-green" ng-if="number.selected">
+
+
+        </span>
+
+      </div>
+
+    </div>
+  </div>
+</div>

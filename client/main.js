@@ -1,10 +1,9 @@
-import angular from 'angular';
-import angularMeteor from 'angular-meteor';
-import todosList from '../imports/components/todosList/todosList';
-import '../imports/startups/accounts-config.js';
+import React from 'react';
+import { Meteor } from 'meteor/meteor';
+import { render } from 'react-dom';
  
-angular.module('simple-todos', [
-  angularMeteor,
-  todosList.name,
-  'accounts.ui'
-]);
+import Bingo from '../imports/Bingo.jsx';
+ 
+Meteor.startup(() => {
+  render(<Bingo />, document.getElementById('bingo-container'));
+});
