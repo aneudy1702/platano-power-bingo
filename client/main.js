@@ -1,10 +1,11 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
-import todosList from '../imports/components/todosList/todosList';
+import bingoChart from '../imports/components/bingo/bingo-chart';
 import '../imports/startups/accounts-config.js';
  
-angular.module('simple-todos', [
+angular.module('bingo', [
   angularMeteor,
-  todosList.name,
-  'accounts.ui'
+  bingoChart.name
 ]);
+
+
