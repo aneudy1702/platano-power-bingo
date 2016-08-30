@@ -11,15 +11,11 @@ const detectorHelper = {
 
   isWinnerColRow(sets) {
     
-    let isWinner = false;
-    
-    _.forEach(sets, (set, index) => {
-      if (this.isWinnerArray(set)) {
-        isWinner = true;
-      }      
+    const winnerSet = _.filter(sets, (set, index) => {
+      return this.isWinnerArray(set)
     });
     
-    return isWinner;
+    return !!winnerSet.length;
   }
 };
 
@@ -44,4 +40,4 @@ export default class WinnerDetector {
   }
 
   // todo: create haveFourDots, deal with ties
-}
+};

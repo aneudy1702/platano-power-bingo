@@ -1,21 +1,20 @@
 import _ from 'lodash';
 
 export default class Groups {
-  constructor(raw_groups = []) {    
-    const that = this;
-    that.columns = [];
-    that.diagonals = {
+  constructor(raw_groups = []) {        
+    this.columns = [];
+    this.diagonals = {
       tl_br: [], //top_left -> bottom_right
       bl_tr: [] // bottom_left -> top_right
     }
-    that.rows = [];
+    this.rows = [];
 
 
 
-    _.forEach(raw_groups, function(g, i){
-      _getColumn.call(that, g);
-      _getDiagonals.call(that, g, i);
-      _getRow.call(that, i, raw_groups);
+    _.forEach(raw_groups, (g, i) => {
+      _getColumn.call(this, g);
+      _getDiagonals.call(this, g, i);
+      _getRow.call(this, i, raw_groups);
     });        
   }
 }
