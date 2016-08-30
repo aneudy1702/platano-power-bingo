@@ -1,4 +1,4 @@
-/* CSS declarations go here */
+ CSS declarations go here */
 body {
     font-family: sans-serif;
  
@@ -48,6 +48,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 5px;
+  box-shadow: 5px 10px 5px #888888;
 }
 .chart .column {
   -webkit-box-flex: 1;
@@ -177,4 +178,22 @@ body {
 
 .hidden {
   opacity: 0.3;
+}
+
+.drawing-container .ball {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  background-color: #f05e48;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
+/*  background-image: -webkit-linear-gradient(-45deg, rgba(225,225,225,.3) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);
+  background-image: -o-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);
+  background-image: -ms-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);*/
 }
