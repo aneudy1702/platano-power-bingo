@@ -55,6 +55,7 @@ export default class Charts extends Component {
     const digitClassNames = classNames({
       'column-digit': true,
       'selected': this.state.selected,
+      // 'icon-smile': this.state.selected,
       'empty': !this.props.number
     });   
 

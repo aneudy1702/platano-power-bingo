@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 import Chart from '../chart/chart.jsx';
 
 import SwipeableViews from 'react-swipeable-views';
+
+import classNames from 'classnames';
  
 // App component - represents the whole app
 export default class Charts extends Component {
@@ -38,6 +40,16 @@ export default class Charts extends Component {
   }
 
   render() {
+
+    const leftArrowClass = classNames({
+      'icon-arrow-left2': true,
+      hidden: !this.state.currentChart
+    });
+
+    const rightArrowClass = classNames({
+      'icon-arrow-right2': true,
+      hidden: (this.state.currentChart + 1) == this.state.charts.length
+    })
     
     return (
       <div className="container">
@@ -47,7 +59,11 @@ export default class Charts extends Component {
         </SwipeableViews>
         
         <center>
-          {this.state.currentChart + 1} out of {this.state.charts.length}
+          <span className={leftArrowClass}></span>
+          <span>
+            {this.state.currentChart + 1} out of {this.state.charts.length} 
+          </span>
+          <span className={rightArrowClass}></span>
         </center>
       </div>
     );
