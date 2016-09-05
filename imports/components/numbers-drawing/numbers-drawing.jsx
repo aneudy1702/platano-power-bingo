@@ -13,11 +13,11 @@ export default class Charts extends Component {
   }
 
   componentDidMount(){
-    setInterval(() => {
-      this.setState({
-        currentIndex: this.state.currentIndex + 1
-      });
-    }, 5 * 1000);
+    // setInterval(() => {
+    //   this.setState({
+    //     currentIndex: this.state.currentIndex + 1
+    //   });
+    // }, 5 * 1000);
   }
 
   

@@ -51,18 +51,24 @@ export default class Charts extends Component {
   render() {
      // ng-class="{'extra-padding':!number, 'selected': (number && number.selected)}"
     // ng-click="selectNumber(number, $index);" 
+    const ramdonColor = _.shuffle(['red', 'green', 'blue', 'yellow', 'purple'])[0];
 
     const digitClassNames = classNames({
       'column-digit': true,
-      'selected': this.state.selected,
-      // 'icon-smile': this.state.selected,
+      'selected': this.state.selected,      
       'empty': !this.props.number
-    });   
+    });  
+
+
+    const ramdonHex = {
+      background: '#'+Math.floor(Math.random()*16777215).toString(16)
+    };
 
     return (
       
       <div className={digitClassNames} onClick={this.handleSelected.bind(this)}>
         {this.getDigitContent(this.props.number)}
+        <div className="selected-circle" style={ramdonHex}></div>
       </div>
 
     );
