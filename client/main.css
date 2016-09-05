@@ -181,7 +181,8 @@ body {
 }
 
 .drawing-container .ball {
-  display: block;
+  color: #fff;
+  font-weight: bold;
   width: 150px;
   height: 150px;
   margin: 10px auto;
@@ -192,8 +193,46 @@ body {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   box-shadow: inset -25px -25px 40px rgba(0,0,0,.5);
-/*  background-image: -webkit-linear-gradient(-45deg, rgba(225,225,225,.3) 0%, transparent 100%);
-  background-image: -moz-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);
-  background-image: -o-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);
-  background-image: -ms-linear-gradient(-45deg, rgba(255,255,255,.3) 0%, transparent 100%);*/
+  line-height: .9;
+}
+.drawing-container .ball .number {
+  font-size: 4em
+}
+
+.drawing-container .ball .letter {
+  font-size: 2em
+}
+
+
+.flex-container-all-center {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.flex-container-all-center .child {
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  -webkit-align-self: auto;
+  -ms-flex-item-align: auto;
+  align-self: auto;
 }
